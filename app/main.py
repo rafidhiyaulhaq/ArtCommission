@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="ArtCommision API")
 
-# CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -21,9 +20,26 @@ def read_root():
         "description": "Platform manajemen pesanan karya seni digital"
     }
 
-@app.get("/health")
+@app.get("/api/health")
 def health_check():
     return {
         "status": "healthy",
         "service": "ArtCommision API"
+    }
+
+@app.get("/api/info")
+def get_api_info():
+    return {
+        "name": "ArtCommision API",
+        "features": [
+            "Digital Art Commission Management",
+            "Artist Portfolio System",
+            "Order Management",
+            "Progress Tracking"
+        ],
+        "version": "1.0",
+        "contact": {
+            "developer": "Rafidhiyaulhaq",
+            "email": "rafidhiyaulhaq.m@gmail.com"
+        }
     }
