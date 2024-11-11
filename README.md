@@ -1,6 +1,6 @@
 # ArtCommission API
 
-Platform manajemen pesanan karya seni digital menggunakan FastAPI.
+Platform manajemen pesanan karya seni digital.
 
 ## Fitur
 
