@@ -25,23 +25,5 @@ def read_root():
 def health_check():
     return {
         "status": "healthy",
-        "service": "ArtCommision API",
-        "environment": "production"
-    }
-
-@app.get("/api/info")
-def get_api_info():
-    return {
-        "name": "ArtCommision API",
-        "features": [
-            "Digital Art Commission Management",
-            "Artist Portfolio System",
-            "Order Management",
-            "Progress Tracking"
-        ],
-        "version": "1.0",
-        "contact": {
-            "developer": "Rafidhiyaulhaq",
-            "email": "rafidhiyaulhaq.m@gmail.com"
-        }
+        "service": "ArtCommision API"
     }
